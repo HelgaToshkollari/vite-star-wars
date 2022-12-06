@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const store = reactive ({
     charactersList : [],
+    
 });
 
 export function getData() {
@@ -11,6 +12,5 @@ export function getData() {
 
         .then((resp) => {
             store.charactersList = resp.data.results;
-
     })
 }

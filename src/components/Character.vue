@@ -6,12 +6,12 @@
         <div class="card-body my-clr ">
           <h5 class="card-title text-white">Characteristics</h5>
             <div class="d-flex text-white justify-content-around ">
-                <ul>
+                <ul class="list-unstyled">
                   <li>Height : {{character.height}}</li>
                   <li>Weight : {{character.mass}}</li>
                   <li>Birth Year : {{character.birth_year}}</li>
                 </ul>
-                <ul>
+                <ul class="list-unstyled">
                   <li>Hair : {{character.hair_color}}</li>
                   <li>Skin : {{character.skin_color}}</li>
                   <li>Eyes : {{character.eye_color}}</li>
@@ -28,7 +28,8 @@ export default {
     props:{
         character:{
         type: Object,
-        }
+        required: true,
+        },
     }
 
     

@@ -8,7 +8,6 @@
     </div>
 </template>
 <script>
-import axios from "axios";
 import Character from "./Character.vue";
 import { store , getData } from "../store";
 export default {
@@ -16,12 +15,19 @@ export default {
     data(){
         return {
             store,
+            loading: false,
         };
     },
     created (){
         getData()
-    }
 
+        this.store.loading = true;
+        
+        setTimeout(() => {        
+          this.store.loading = false;
+        }, 2000);
+      
+    }
     
 }
 </script>
