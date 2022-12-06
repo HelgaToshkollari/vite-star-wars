@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <div class="my-bg ">
     <TheHeader></TheHeader>
-    <div class="container">
-      <CharactersList></CharactersList>
+    <div class="container ">
+      <div class="p-4">
+        <CharactersList></CharactersList>
+      </div>
+      
 
     </div>
     <TheFooter></TheFooter>
@@ -33,5 +36,10 @@ export default{
 
 <style lang="scss">
 @use "./styles/general.scss";
+.my-bg{
+  background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg');
+  object-fit: cover;
+  background-position: center;
+}
 
 </style>

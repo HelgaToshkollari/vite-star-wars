@@ -1,20 +1,20 @@
 <template lang="">
-    <div class="card">
-        <div class="card-header">
-          {{character.name}}
+    <div class="card border-0">
+        <div class=" my-clr text-warning text-center p-2">
+          <h2>{{character.name}}</h2>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Characteristics</h5>
-            <div class="d-flex justify-content-around">
+        <div class="card-body my-clr ">
+          <h5 class="card-title text-white">Characteristics</h5>
+            <div class="d-flex text-white justify-content-around ">
                 <ul>
                   <li>Height : {{character.height}}</li>
-                  <li>{{character.mass}}</li>
-                  <li>{{character.birth_year}}</li>
+                  <li>Weight : {{character.mass}}</li>
+                  <li>Birth Year : {{character.birth_year}}</li>
                 </ul>
                 <ul>
-                  <li>{{character.hair_color}}</li>
-                  <li>{{character.skin_color}}</li>
-                  <li>{{character.eye_color}}</li>
+                  <li>Hair : {{character.hair_color}}</li>
+                  <li>Skin : {{character.skin_color}}</li>
+                  <li>Eyes : {{character.eye_color}}</li>
                 </ul>
             </div>
 
@@ -36,5 +36,11 @@ export default {
 }
 </script>
 <style lang="scss">
+@use "../styles/partials/variables"  as *;
+.my-clr{
+    background-color: rgb(4, 1, 41);
+
+}
+
     
 </style>
