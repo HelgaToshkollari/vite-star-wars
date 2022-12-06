@@ -14,12 +14,15 @@
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import CharactersList from './components/CharactersList.vue';
+import { store } from "./store";
 
 
 export default{
   components:{ TheHeader , TheFooter, CharactersList },
   data() {
     return {
+      
+      store
       
     }
   },
