@@ -8,24 +8,30 @@
     </div>
 </template>
 <script>
+import axios from "axios"
 import Character from "./Character.vue";
-import { store , getData } from "../store";
+import { store } from "../store";
 export default {
     components:{ Character},
     data(){
         return {
             store,
-            loading: false,
         };
     },
     created (){
-        getData()
-
-        this.store.loading = true;
         
-        setTimeout(() => {        
-          this.store.loading = false;
-        }, 2000);
+        this.store.loading = true;
+
+        axios.get("https://swapi.dev/api/people/")
+
+        .then((resp) => {
+            store.charactersList = resp.data.results;
+
+            setTimeout(() => {        
+            this.store.loading = false;
+            }, 2000);
+
+        })
       
     }
     
